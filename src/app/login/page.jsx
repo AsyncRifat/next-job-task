@@ -55,11 +55,13 @@ export default function Login() {
           >
             Login
           </button>
-          <p className="text-rose-500">
-            Sorry! <br /> I did not connect it to mongoDB. <br /> I hard coded
-            the username and password. <br /> username:{' '}
-            <span className="font-bold text-md">Admin</span> <br /> password:
-            <span className="font-bold text-md">password</span>
+          <p className="text-rose-500 mt-3">
+            <span className="font-bold text-md">Sorry!</span> <br /> I did not
+            connect it to mongoDB. <br /> I hardcoded the username and password.{' '}
+            <br /> username: <span className="font-bold text-md">Admin</span>{' '}
+            <br /> password:
+            <span className="font-bold text-md">password</span> <br />
+            Using these you will get permission to add products.
           </p>
         </form>
       </div>
