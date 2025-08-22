@@ -2,9 +2,12 @@ import Navbar from '../components/Navbar';
 import ProductCard from '../components/ProductCard';
 
 async function getProducts() {
-  const res = await fetch('http://localhost:3000/api/products', {
-    cache: 'no-store',
-  }); // No cache for fresh data
+  const res = await fetch(
+    'https://next-job-task-coral.vercel.app/api/products',
+    {
+      cache: 'no-store',
+    }
+  ); // No cache for fresh data
   if (!res.ok) {
     throw new Error('Failed to fetch products');
   }

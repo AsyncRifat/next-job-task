@@ -1,8 +1,11 @@
 // Fetch single product by id from API (server-side)
 async function getProduct(id) {
-  const res = await fetch(`http://localhost:3000/api/products?id=${id}`, {
-    cache: 'no-store',
-  });
+  const res = await fetch(
+    `https://next-job-task-coral.vercel.app/api/products?id=${id}`,
+    {
+      cache: 'no-store',
+    }
+  );
   if (!res.ok) {
     throw new Error('Failed to fetch product');
   }

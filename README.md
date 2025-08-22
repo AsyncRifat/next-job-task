@@ -13,7 +13,7 @@ JSON database.
 2. Navigate to the directory: `cd job-task`
 3. Install dependencies: `npm install`
 4. Run the development server: `npm run dev`
-5. Open http://localhost:3000 in your browser.
+5. Open https://next-job-task-coral.vercel.app in your browser.
 
 Note: Use username "admin" and password "password" for login (hardcoded for
 demo).
