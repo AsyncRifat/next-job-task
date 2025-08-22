@@ -55,6 +55,12 @@ export default function Login() {
           >
             Login
           </button>
+          <p className="text-rose-500">
+            Sorry! <br /> I did not connect it to mongoDB. <br /> I hard coded
+            the username and password. <br /> username:{' '}
+            <span className="font-bold text-md">Admin</span> <br /> password:
+            <span className="font-bold text-md">password</span>
+          </p>
         </form>
       </div>
     </div>
