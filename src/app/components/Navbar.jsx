@@ -3,7 +3,7 @@ import Link from 'next/link'; // Import Link for navigation
 
 export default function Navbar() {
   return (
-    <nav className="bg-cyan-600 text-white p-4 shadow-md sticky top-0">
+    <nav className="bg-cyan-800 text-white p-3 shadow-md sticky top-0">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold">
@@ -11,6 +11,9 @@ export default function Navbar() {
         </Link>
         {/* Navigation links */}
         <div className="space-x-4">
+          <Link href="/dashboard/add-product" className="hover:underline">
+            Add Product
+          </Link>
           <Link href="/products" className="hover:underline">
             Products
           </Link>

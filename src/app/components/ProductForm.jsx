@@ -24,21 +24,21 @@ export default function ProductForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-md mx-auto bg-gray-500 p-6 rounded-lg shadow-md text-black"
+      className="max-w-xl mx-auto bg-gray-200 p-6 rounded-lg shadow-lg text-black"
     >
       <input
         type="text"
         placeholder="Product Name"
         value={name}
         onChange={e => setName(e.target.value)}
-        className="form-input mb-4 w-full border px-2 rounded-sm"
+        className="w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-cyan-500 bg-teal-50 border-gray-300 text-black mb-5"
         required
       />
       <textarea
         placeholder="Description"
         value={description}
         onChange={e => setDescription(e.target.value)}
-        className="form-input mb-4  w-full border px-2 rounded-sm"
+        className="w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-cyan-500 bg-teal-50 border-gray-300 text-black mb-5"
         rows={4}
         required
       />
@@ -47,10 +47,13 @@ export default function ProductForm() {
         placeholder="Price"
         value={price}
         onChange={e => setPrice(e.target.value)}
-        className="form-input mb-4 w-full border px-2 rounded-sm"
+        className="form-input w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-cyan-500 bg-teal-50 border-gray-300 text-black mb-5"
         required
       />
-      <button type="submit" className="btn w-full">
+      <button
+        type="submit"
+        className="btn w-full bg-cyan-800 py-2 rounded-lg text-teal-50"
+      >
         Add Product
       </button>
     </form>

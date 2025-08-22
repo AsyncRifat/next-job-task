@@ -1,13 +1,10 @@
-import Link from 'next/link'; // Import Link
+import Navbar from '../components/Navbar';
 import ProductCard from '../components/ProductCard';
 
 async function getProducts() {
-  const res = await fetch(
-    'https://next-job-task-coral.vercel.app/api/products',
-    {
-      cache: 'no-store',
-    }
-  ); // No cache for fresh data
+  const res = await fetch('http://localhost:3000/api/products', {
+    cache: 'no-store',
+  }); // No cache for fresh data
   if (!res.ok) {
     throw new Error('Failed to fetch products');
   }
@@ -18,15 +15,20 @@ export default async function Products() {
   const products = await getProducts(); // Get products
 
   return (
-    <div className="container mx-auto py-12">
+    <>
+      {/* Navbar */}
+      <Navbar />
+
       {/* Title */}
-      <h1 className="text-3xl font-bold mb-8 text-center">Our Products</h1>
+      <h1 className="text-3xl font-bold text-center text-black my-10">
+        Our Products
+      </h1>
       {/* Product grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-15 mx-3 md:mx-15 ">
         {products.map(product => (
           <ProductCard key={product.id} product={product} /> // Render each product
         ))}
       </div>
-    </div>
+    </>
   );
 }

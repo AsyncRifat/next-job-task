@@ -14,19 +14,13 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
-// export const metadata = {
-//   title: 'Job Task App',
-//   description:
-//     'A simple Next.js app with authentication and product management',
-// };
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <main className="min-h-screen">
+        <main className="min-h-[calc(100vh-56px)] bg-teal-50">
           <SessionProvider>{children}</SessionProvider>
         </main>
         <Footer />
