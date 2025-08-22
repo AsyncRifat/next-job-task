@@ -10,5 +10,11 @@
     "name": "Product 2",
     "description": "This is a detailed description for Product 2. High quality and affordable.",
     "price": 49.99
+  },
+  {
+    "name": "Sed esse incidunt ",
+    "description": "Deserunt quisquam ve",
+    "price": 12,
+    "id": 3
   }
 ]
